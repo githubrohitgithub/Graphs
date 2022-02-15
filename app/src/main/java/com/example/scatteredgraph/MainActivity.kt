@@ -1,7 +1,9 @@
 package com.example.scatteredgraph
 
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.github.mikephil.charting.charts.BarChart
 import com.github.mikephil.charting.charts.ScatterChart
@@ -19,8 +21,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var barEntries: ArrayList<BarEntry>
 
 
-
-
+    lateinit var button:Button
 
     private lateinit var scatterChart: ScatterChart
     private var scatterData: ScatterData? = null
@@ -31,6 +32,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        button=findViewById(R.id.candle);
+
+        button.setOnClickListener {
+
+            startActivity(Intent(applicationContext,MainActivity2::class.java))
+        }
+
         scatterChart = findViewById(R.id.scatterChart)
         barChart = findViewById(R.id.barChart)
         entries1

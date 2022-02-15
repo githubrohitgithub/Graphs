@@ -18,4 +18,10 @@
         android:layout_width="fill_parent"
         android:layout_height="250dp" />
 
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/candle"
+        android:layout_above="@+id/barChart"
+        android:layout_height="wrap_content"/>
+
 </RelativeLayout>
