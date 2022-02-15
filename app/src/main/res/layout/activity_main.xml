@@ -21,6 +21,7 @@
     <Button
         android:layout_width="match_parent"
         android:id="@+id/candle"
+        android:text="Candle graph"
         android:layout_above="@+id/barChart"
         android:layout_height="wrap_content"/>
 
