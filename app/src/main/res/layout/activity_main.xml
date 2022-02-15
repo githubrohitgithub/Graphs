@@ -11,4 +11,11 @@
         android:layout_width="fill_parent"
         android:layout_height="250dp" />
 
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barChart"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp" />
+
 </RelativeLayout>
