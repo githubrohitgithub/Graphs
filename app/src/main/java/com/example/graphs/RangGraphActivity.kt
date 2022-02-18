@@ -5,8 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.anychart.AnyChart
 import com.anychart.chart.common.dataentry.DataEntry
 import com.anychart.data.Set
-import com.example.scatteredgraph.R
-import com.example.scatteredgraph.databinding.ActivityRangegraphBinding
+import com.example.graphs.databinding.ActivityRangegraphBinding
 
 
 class RangGraphActivity : AppCompatActivity() {
