@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val dataSets by lazy { ArrayList<IScatterDataSet>() }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -27,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         binding.btnCandle.setOnClickListener {
             startActivity(Intent(applicationContext,MainActivity2::class.java))
         }
-
 
         val set1 = ScatterDataSet(initDataset1(), "Data set 1")
         set1.apply {
@@ -53,6 +50,8 @@ class MainActivity : AppCompatActivity() {
             this.scatterShapeSize = 15f
         }
 
+
+        val dataSets by lazy { ArrayList<IScatterDataSet>() }
         dataSets.add(set1)
         dataSets.add(set2)
         dataSets.add(set3)
