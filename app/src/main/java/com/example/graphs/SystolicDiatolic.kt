@@ -20,7 +20,6 @@ class SystolicDiatolic : AppCompatActivity() {
         binding = ActivitySystolicDiatolicBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         val dataset1 = LineDataSet(initDataSet(), "Data set 1")
         dataset1.apply {
             this.color = Color.BLUE
@@ -41,7 +40,6 @@ class SystolicDiatolic : AppCompatActivity() {
             this.data = LineData(dataset1)
             this.description.text = "Systolic and Diatolic"
             this.description.isEnabled = true
-
         }
 
     }
@@ -61,6 +59,5 @@ class SystolicDiatolic : AppCompatActivity() {
         dataSetEntries.add(Entry(10f, 120f))
         return dataSetEntries
     }
-
 
 }
