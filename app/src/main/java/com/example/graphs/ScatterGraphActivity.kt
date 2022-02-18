@@ -1,10 +1,10 @@
-package com.example.scatteredgraph
+package com.example.graphs
 
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.scatteredgraph.databinding.ActivityMainBinding
+import com.example.graphs.databinding.ActivityScattergraphBinding
 import com.github.mikephil.charting.charts.ScatterChart
 import com.github.mikephil.charting.components.LimitLine
 import com.github.mikephil.charting.components.XAxis
@@ -13,18 +13,21 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter
 import com.github.mikephil.charting.interfaces.datasets.IScatterDataSet
 
 
-class MainActivity : AppCompatActivity() {
+class ScatterGraphActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityScattergraphBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityScattergraphBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnCandle.setOnClickListener {
-            startActivity(Intent(applicationContext,MainActivity2::class.java))
+
+        binding.apply {
+            btnRangeGraph.setOnClickListener { startActivity(Intent(applicationContext, RangGraphActivity::class.java)) }
+            btnLineGraph.setOnClickListener { startActivity(Intent(applicationContext, SystolicDiatolic::class.java)) }
         }
+
 
         val set1 = ScatterDataSet(initDataset1(), "Data set 1")
         set1.apply {

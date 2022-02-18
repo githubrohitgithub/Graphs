@@ -1,4 +1,4 @@
-package com.example.scatteredgraph;
+package com.example.graphs;
 
 import android.content.Context;
 

@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 
     }
 }
-rootProject.name = "ScatteredGraph"
+rootProject.name = "Graphs"
 include ':app'

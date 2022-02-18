@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ScatterGraphActivity">
 
     <com.github.mikephil.charting.charts.ScatterChart
         android:id="@+id/scatterChart"
@@ -14,8 +14,14 @@
 
     <Button
         android:layout_width="match_parent"
-        android:id="@+id/btnCandle"
-        android:text="Candle graph"
+        android:id="@+id/btnRangeGraph"
+        android:text="Range graph"
+        android:layout_above="@+id/btnLineGraph"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:layout_width="match_parent"
+        android:id="@+id/btnLineGraph"
+        android:text="Line graph"
         android:layout_alignParentBottom="true"
         android:layout_height="wrap_content"/>
 
